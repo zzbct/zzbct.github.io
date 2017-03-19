@@ -282,60 +282,9 @@
 </tr>
 </tbody>
 </table>
-<h3 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h3><p>通用html:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">/*HTML*/</div><div class="line">  &lt;div class=&quot;parent&quot;&gt;</div><div class="line">	&lt;div class=&quot;child&quot;&gt;</div><div class="line">		&lt;p&gt;ok!p&lt;/p&gt;</div><div class="line">	&lt;/div&gt;</div><div class="line">  &lt;/div&gt;</div></pre></td></tr></table></figure>
-<p>css代码：</p>
-<ul>
-<li>margin: 0 auto</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">/*CSS*/</div><div class="line"> .child&#123;</div><div class="line"> 	width: 200px;</div><div class="line"> 	margin: 0 auto;</div><div class="line"> 	background-color:  pink;</div><div class="line"> &#125;</div></pre></td></tr></table></figure>
-<p><img src="http://img.blog.csdn.net/20170315105450382?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMjY4NjQwNzc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt=""></p>
-<ul>
-<li>margin: auto;</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">.child&#123;</div><div class="line">  	position: relative;</div><div class="line">  	width: 200px;</div><div class="line">  	margin: auto;</div><div class="line">  	background-color:  pink;</div><div class="line">  &#125;</div></pre></td></tr></table></figure>
-<p><img src="http://img.blog.csdn.net/20170315105450382?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMjY4NjQwNzc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt=""></p>
-<ul>
-<li>absolute+margin</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">.parent&#123;</div><div class="line"> 	position: relative;</div><div class="line"> 	width: 400px;</div><div class="line"> 	height: 300px;</div><div class="line"> 	background-color: gray;</div><div class="line"> &#125;</div><div class="line"> .child&#123;</div><div class="line"> 	position: absolute;</div><div class="line"> 	width: 200px;</div><div class="line"> 	height: 100px;</div><div class="line"> 	left: 50%;</div><div class="line"> 	top: 50%;</div><div class="line"> 	margin: -50px -100px;</div><div class="line"> 	background-color:  pink;</div><div class="line"> &#125;</div></pre></td></tr></table></figure>
-<p><img src="http://img.blog.csdn.net/20170315110446038?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMjY4NjQwNzc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
-<ul>
-<li>absolute+transform</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">.parent&#123;</div><div class="line">	position: relative;</div><div class="line">	width: 400px;</div><div class="line">	height: 300px;</div><div class="line">	background-color: gray;</div><div class="line">&#125;</div><div class="line">.child&#123;</div><div class="line">	position: absolute;</div><div class="line">	left: 50%;</div><div class="line">	top: 50%;</div><div class="line">	transform: translate(-50%,-50%);</div><div class="line">	background-color:  pink;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p> <img src="http://img.blog.csdn.net/20170315110657369?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMjY4NjQwNzc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
-<ul>
-<li>text-align</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">.parent&#123;</div><div class="line"> 	text-align: center;</div><div class="line"> 	width: 400px;</div><div class="line"> 	height: 300px;</div><div class="line"> 	background-color: gray;</div><div class="line"> &#125;</div><div class="line"> .child&#123;</div><div class="line"> 	display: inline-block;</div><div class="line"> 	background-color:  pink;</div><div class="line"> &#125;</div></pre></td></tr></table></figure>
-<p> <img src="http://img.blog.csdn.net/20170315110943451?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMjY4NjQwNzc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
-<ul>
-<li>verical-align</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">.parent&#123;</div><div class="line">	display: table-cell;</div><div class="line">	vertical-align: middle;</div><div class="line">	width: 400px;</div><div class="line">	height: 300px;</div><div class="line">	background-color: gray;</div><div class="line">&#125;</div><div class="line">.child&#123;</div><div class="line">	display: inline-block;</div><div class="line">	background-color:  pink;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p><img src="http://img.blog.csdn.net/20170315111112170?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMjY4NjQwNzc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
-<ul>
-<li>verical-align + text-align</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">.parent&#123;</div><div class="line">	display: table-cell;</div><div class="line">	vertical-align: middle;</div><div class="line">	text-align: center;</div><div class="line">	width: 400px;</div><div class="line">	height: 300px;</div><div class="line">	background-color: gray;</div><div class="line">&#125;</div><div class="line">.child&#123;</div><div class="line">	display: inline-block;</div><div class="line">	background-color:  pink;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p><img src="http://img.blog.csdn.net/20170315111205283?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMjY4NjQwNzc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
-<ul>
-<li>flex+justify-content</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">.parent&#123;</div><div class="line"> 	display: flex;</div><div class="line"> 	justify-content: center;</div><div class="line"> 	width: 400px;</div><div class="line"> 	height: 300px;</div><div class="line"> 	background-color: gray;</div><div class="line"> &#125;</div><div class="line"> .child&#123;</div><div class="line"> 	background-color:  pink;</div><div class="line"> &#125;</div></pre></td></tr></table></figure>
-<p> <img src="http://img.blog.csdn.net/20170315111421910?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMjY4NjQwNzc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
-<ul>
-<li>flex+align-items</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">.parent&#123;</div><div class="line">	display: flex;</div><div class="line">	align-items: center;</div><div class="line">	width: 400px;</div><div class="line">	height: 300px;</div><div class="line">	background-color: gray;</div><div class="line">&#125;</div><div class="line">.child&#123;</div><div class="line">	background-color:  pink;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p> <img src="http://img.blog.csdn.net/20170315111513864?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMjY4NjQwNzc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
-<ul>
-<li>flex+justify-content+align-items</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">.parent&#123;</div><div class="line">	display: flex;</div><div class="line">	justify-content: center;</div><div class="line">	align-items: center;</div><div class="line">	width: 400px;</div><div class="line">	height: 300px;</div><div class="line">	background-color: gray;</div><div class="line">&#125;</div><div class="line">.child&#123;</div><div class="line">	background-color:  pink;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p><img src="http://img.blog.csdn.net/20170315111608975?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMjY4NjQwNzc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
-
+        
+          <a class="article-more-a" href="/2017/03/17/博客测试/#more">more >></a>
+        
       
 
       
@@ -343,6 +292,21 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">居中</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -511,6 +475,14 @@
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">css</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">居中</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
