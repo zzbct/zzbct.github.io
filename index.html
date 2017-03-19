@@ -158,9 +158,232 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="[layout]-博客测试" class="article article-type-[layout]  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
   
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/03/17/博客测试/">博客测试</a>
+    </h1>
+  
+
+        
+        <a href="/2017/03/17/博客测试/" class="archive-article-date">
+  	<time datetime="2017-03-17T11:24:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-17</time>
+</a>
+        
+      </header>
     
+	<div class="article-entry" itemprop="articleBody">
+		
+			<p>#css 居中–分类整理及程序示例</p>
+<p>本节将css居中分类如下：</p>
+<ul>
+<li><strong>水平居中</strong></li>
+<li><strong>垂直居中</strong></li>
+<li><strong>水平垂直居中</strong></li>
+</ul>
+<hr>
+<h3 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h3><table>
+<thead>
+<tr>
+<th>居中样式</th>
+<th>父元素依赖</th>
+<th>需要定宽</th>
+<th>待居中元素</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>水平</td>
+<td>null</td>
+<td>width: 200px(高自适应)</td>
+<td>margin: 0 auto</td>
+</tr>
+<tr>
+<td>水平</td>
+<td>null</td>
+<td>width: 200px(高自适应)</td>
+<td>position: relative; margin: auto</td>
+</tr>
+<tr>
+<td>水平</td>
+<td>display: relative</td>
+<td>width: 200px(高自适应)</td>
+<td>left: 50%; top: 0; margin: 0 -100px;</td>
+</tr>
+<tr>
+<td>垂直</td>
+<td>display: relative</td>
+<td>height: 100px(宽自适应)</td>
+<td>left: 0; top: 50%; margin: -50px 0;</td>
+</tr>
+<tr>
+<td>水平垂直</td>
+<td>display: relative</td>
+<td>width: 200px; height: 100px</td>
+<td>left: 50%; top: 50%; margin: -50px -50px;</td>
+</tr>
+<tr>
+<td>水平</td>
+<td>display: relative</td>
+<td>null(高宽自适应)</td>
+<td>position: absolute; left: 50%; top: 0; transform: translate(-50%,0);</td>
+</tr>
+<tr>
+<td>垂直</td>
+<td>display: relative</td>
+<td>null(高宽自适应)</td>
+<td>position: absolute; left: 0; top: 50%; transform: translate(0,-50%);</td>
+</tr>
+<tr>
+<td>水平垂直</td>
+<td>display: relative</td>
+<td>null(高宽自适应)</td>
+<td>position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%);</td>
+</tr>
+<tr>
+<td>水平</td>
+<td>display:flex;justify-content: center</td>
+<td>null(width自适应，height未设置时拉伸为与父元素等高)</td>
+<td>null</td>
+</tr>
+<tr>
+<td>垂直</td>
+<td>display:flex;align-items: center</td>
+<td>null(width、height自适应)</td>
+<td>null</td>
+</tr>
+<tr>
+<td>水平垂直</td>
+<td>display:flex;align-items: center;justfy-content:center</td>
+<td>null(width、height自适应)</td>
+<td>null</td>
+</tr>
+<tr>
+<td>水平居中</td>
+<td>text-align: center</td>
+<td>null(高宽自适应)</td>
+<td>display: inline-block OR display: inline</td>
+</tr>
+<tr>
+<td>垂直</td>
+<td>dispaly: table-cell; verical-align: middle</td>
+<td>null(高宽自适应)</td>
+<td>display: inline-block OR display: inline</td>
+</tr>
+<tr>
+<td>水平垂直</td>
+<td>dispaly: table-cell; verical-align: middle; text-align: center;</td>
+<td>null(高宽自适应)</td>
+<td>display: inline-block OR display: inline</td>
+</tr>
+</tbody>
+</table>
+			
+				<a class="artical-more-a" href="/2017/03/17/博客测试/#more">more</a>
+			
+		
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">居中</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/03/17/博客测试/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
+    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/03/17/hello-world/">Hello World</a>
+    </h1>
+  
+
+        
+        <a href="/2017/03/17/hello-world/" class="archive-article-date">
+  	<time datetime="2017-03-17T10:42:28.902Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-17</time>
+</a>
+        
+      </header>
+    
+	<div class="article-entry" itemprop="articleBody">
+		
+		    
+			
+				<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+				
+					<a class="artical-more-a" href="/2017/03/17/hello-world/#more">more</a>
+				
+			
+		
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/03/17/hello-world/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
   
   
 
