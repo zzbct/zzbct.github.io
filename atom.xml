@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Candy 程的小日子</title>
+  <subtitle>不喜安定的囧姑娘</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2017-03-19T02:49:41.150Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>Candy 程</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>博客测试</title>
+    <link href="http://yoursite.com/2017/03/17/%E5%8D%9A%E5%AE%A2%E6%B5%8B%E8%AF%95/"/>
+    <id>http://yoursite.com/2017/03/17/博客测试/</id>
+    <published>2017-03-17T11:24:23.000Z</published>
+    <updated>2017-03-19T02:49:41.150Z</updated>
+    
+    <content type="html"><![CDATA[<p>#css 居中–分类整理及程序示例</p>
+<p>本节将css居中分类如下：</p>
+<ul>
+<li><strong>水平居中</strong></li>
+<li><strong>垂直居中</strong></li>
+<li><strong>水平垂直居中</strong></li>
+</ul>
+<hr>
+<h3 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h3><table>
+<thead>
+<tr>
+<th>居中样式</th>
+<th>父元素依赖</th>
+<th>需要定宽</th>
+<th>待居中元素</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>水平</td>
+<td>null</td>
+<td>width: 200px(高自适应)</td>
+<td>margin: 0 auto</td>
+</tr>
+<tr>
+<td>水平</td>
+<td>null</td>
+<td>width: 200px(高自适应)</td>
+<td>position: relative; margin: auto</td>
+</tr>
+<tr>
+<td>水平</td>
+<td>display: relative</td>
+<td>width: 200px(高自适应)</td>
+<td>left: 50%; top: 0; margin: 0 -100px;</td>
+</tr>
+<tr>
+<td>垂直</td>
+<td>display: relative</td>
+<td>height: 100px(宽自适应)</td>
+<td>left: 0; top: 50%; margin: -50px 0;</td>
+</tr>
+<tr>
+<td>水平垂直</td>
+<td>display: relative</td>
+<td>width: 200px; height: 100px</td>
+<td>left: 50%; top: 50%; margin: -50px -50px;</td>
+</tr>
+<tr>
+<td>水平</td>
+<td>display: relative</td>
+<td>null(高宽自适应)</td>
+<td>position: absolute; left: 50%; top: 0; transform: translate(-50%,0);</td>
+</tr>
+<tr>
+<td>垂直</td>
+<td>display: relative</td>
+<td>null(高宽自适应)</td>
+<td>position: absolute; left: 0; top: 50%; transform: translate(0,-50%);</td>
+</tr>
+<tr>
+<td>水平垂直</td>
+<td>display: relative</td>
+<td>null(高宽自适应)</td>
+<td>position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%);</td>
+</tr>
+<tr>
+<td>水平</td>
+<td>display:flex;justify-content: center</td>
+<td>null(width自适应，height未设置时拉伸为与父元素等高)</td>
+<td>null</td>
+</tr>
+<tr>
+<td>垂直</td>
+<td>display:flex;align-items: center</td>
+<td>null(width、height自适应)</td>
+<td>null</td>
+</tr>
+<tr>
+<td>水平垂直</td>
+<td>display:flex;align-items: center;justfy-content:center</td>
+<td>null(width、height自适应)</td>
+<td>null</td>
+</tr>
+<tr>
+<td>水平居中</td>
+<td>text-align: center</td>
+<td>null(高宽自适应)</td>
+<td>display: inline-block OR display: inline</td>
+</tr>
+<tr>
+<td>垂直</td>
+<td>dispaly: table-cell; verical-align: middle</td>
+<td>null(高宽自适应)</td>
+<td>display: inline-block OR display: inline</td>
+</tr>
+<tr>
+<td>水平垂直</td>
+<td>dispaly: table-cell; verical-align: middle; text-align: center;</td>
+<td>null(高宽自适应)</td>
+<td>display: inline-block OR display: inline</td>
+</tr>
+</tbody>
+</table>
+<h3 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h3><p>通用html:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">/*HTML*/</div><div class="line">  &lt;div class=&quot;parent&quot;&gt;</div><div class="line">	&lt;div class=&quot;child&quot;&gt;</div><div class="line">		&lt;p&gt;ok!p&lt;/p&gt;</div><div class="line">	&lt;/div&gt;</div><div class="line">  &lt;/div&gt;</div></pre></td></tr></table></figure>
+<p>css代码：</p>
+<ul>
+<li>margin: 0 auto</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">/*CSS*/</div><div class="line"> .child&#123;</div><div class="line"> 	width: 200px;</div><div class="line"> 	margin: 0 auto;</div><div class="line"> 	background-color:  pink;</div><div class="line"> &#125;</div></pre></td></tr></table></figure>
+<p><img src="http://img.blog.csdn.net/20170315105450382?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMjY4NjQwNzc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt=""></p>
+<ul>
+<li>margin: auto;</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">.child&#123;</div><div class="line">  	position: relative;</div><div class="line">  	width: 200px;</div><div class="line">  	margin: auto;</div><div class="line">  	background-color:  pink;</div><div class="line">  &#125;</div></pre></td></tr></table></figure>
+<p><img src="http://img.blog.csdn.net/20170315105450382?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMjY4NjQwNzc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt=""></p>
+<ul>
+<li>absolute+margin</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">.parent&#123;</div><div class="line"> 	position: relative;</div><div class="line"> 	width: 400px;</div><div class="line"> 	height: 300px;</div><div class="line"> 	background-color: gray;</div><div class="line"> &#125;</div><div class="line"> .child&#123;</div><div class="line"> 	position: absolute;</div><div class="line"> 	width: 200px;</div><div class="line"> 	height: 100px;</div><div class="line"> 	left: 50%;</div><div class="line"> 	top: 50%;</div><div class="line"> 	margin: -50px -100px;</div><div class="line"> 	background-color:  pink;</div><div class="line"> &#125;</div></pre></td></tr></table></figure>
+<p><img src="http://img.blog.csdn.net/20170315110446038?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMjY4NjQwNzc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
+<ul>
+<li>absolute+transform</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">.parent&#123;</div><div class="line">	position: relative;</div><div class="line">	width: 400px;</div><div class="line">	height: 300px;</div><div class="line">	background-color: gray;</div><div class="line">&#125;</div><div class="line">.child&#123;</div><div class="line">	position: absolute;</div><div class="line">	left: 50%;</div><div class="line">	top: 50%;</div><div class="line">	transform: translate(-50%,-50%);</div><div class="line">	background-color:  pink;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p> <img src="http://img.blog.csdn.net/20170315110657369?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMjY4NjQwNzc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
+<ul>
+<li>text-align</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">.parent&#123;</div><div class="line"> 	text-align: center;</div><div class="line"> 	width: 400px;</div><div class="line"> 	height: 300px;</div><div class="line"> 	background-color: gray;</div><div class="line"> &#125;</div><div class="line"> .child&#123;</div><div class="line"> 	display: inline-block;</div><div class="line"> 	background-color:  pink;</div><div class="line"> &#125;</div></pre></td></tr></table></figure>
+<p> <img src="http://img.blog.csdn.net/20170315110943451?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMjY4NjQwNzc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
+<ul>
+<li>verical-align</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">.parent&#123;</div><div class="line">	display: table-cell;</div><div class="line">	vertical-align: middle;</div><div class="line">	width: 400px;</div><div class="line">	height: 300px;</div><div class="line">	background-color: gray;</div><div class="line">&#125;</div><div class="line">.child&#123;</div><div class="line">	display: inline-block;</div><div class="line">	background-color:  pink;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><img src="http://img.blog.csdn.net/20170315111112170?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMjY4NjQwNzc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
+<ul>
+<li>verical-align + text-align</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">.parent&#123;</div><div class="line">	display: table-cell;</div><div class="line">	vertical-align: middle;</div><div class="line">	text-align: center;</div><div class="line">	width: 400px;</div><div class="line">	height: 300px;</div><div class="line">	background-color: gray;</div><div class="line">&#125;</div><div class="line">.child&#123;</div><div class="line">	display: inline-block;</div><div class="line">	background-color:  pink;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><img src="http://img.blog.csdn.net/20170315111205283?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMjY4NjQwNzc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
+<ul>
+<li>flex+justify-content</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">.parent&#123;</div><div class="line"> 	display: flex;</div><div class="line"> 	justify-content: center;</div><div class="line"> 	width: 400px;</div><div class="line"> 	height: 300px;</div><div class="line"> 	background-color: gray;</div><div class="line"> &#125;</div><div class="line"> .child&#123;</div><div class="line"> 	background-color:  pink;</div><div class="line"> &#125;</div></pre></td></tr></table></figure>
+<p> <img src="http://img.blog.csdn.net/20170315111421910?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMjY4NjQwNzc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
+<ul>
+<li>flex+align-items</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">.parent&#123;</div><div class="line">	display: flex;</div><div class="line">	align-items: center;</div><div class="line">	width: 400px;</div><div class="line">	height: 300px;</div><div class="line">	background-color: gray;</div><div class="line">&#125;</div><div class="line">.child&#123;</div><div class="line">	background-color:  pink;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p> <img src="http://img.blog.csdn.net/20170315111513864?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMjY4NjQwNzc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
+<ul>
+<li>flex+justify-content+align-items</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">.parent&#123;</div><div class="line">	display: flex;</div><div class="line">	justify-content: center;</div><div class="line">	align-items: center;</div><div class="line">	width: 400px;</div><div class="line">	height: 300px;</div><div class="line">	background-color: gray;</div><div class="line">&#125;</div><div class="line">.child&#123;</div><div class="line">	background-color:  pink;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><img src="http://img.blog.csdn.net/20170315111608975?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMjY4NjQwNzc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;#css 居中–分类整理及程序示例&lt;/p&gt;
+&lt;p&gt;本节将css居中分类如下：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;水平居中&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;垂直居中&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;水平垂直居中&lt;/strong&gt;
+    
+    </summary>
+    
+    
+      <category term="css" scheme="http://yoursite.com/tags/css/"/>
+    
+      <category term="居中" scheme="http://yoursite.com/tags/%E5%B1%85%E4%B8%AD/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://yoursite.com/2017/03/17/hello-world/"/>
+    <id>http://yoursite.com/2017/03/17/hello-world/</id>
+    <published>2017-03-17T10:42:28.902Z</published>
+    <updated>2017-03-17T10:42:28.902Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>
