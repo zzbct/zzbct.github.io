@@ -8,19 +8,16 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>hasLayout与BFC | Candy 程的小日子</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="作为前端的好孩子，总会遇到一个经典不朽的问题：有几种闭合内部浮动的方法？哈哈，是不是想说这个能难得住我？马上能列出个123：
-#####开胃小菜，拈来尝尝1.在最后一个浮动元素的下面添加空白标签      &amp;lt;div style = &amp;quot;clear:both&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;or      &amp;lt;br clear = &amp;quot;all&amp;quot;&amp;gt">
+  <meta name="description" content="作为前端的好孩子，总会遇到一个经典不朽的问题：有几种闭合内部浮动的方法？哈哈，是不是想说这个能难得住我？马上能列出个123：开胃小菜，拈来尝尝1.在最后一个浮动元素的下面添加空白标签      &amp;lt;div style = &amp;quot;clear:both&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;or      &amp;lt;br clear = &amp;quot;all&amp;quot;&amp;gt;2.父元素">
 <meta property="og:type" content="article">
 <meta property="og:title" content="hasLayout与BFC">
 <meta property="og:url" content="http://yoursite.com/2017/03/21/hasLayout与BFC/index.html">
 <meta property="og:site_name" content="Candy 程的小日子">
-<meta property="og:description" content="作为前端的好孩子，总会遇到一个经典不朽的问题：有几种闭合内部浮动的方法？哈哈，是不是想说这个能难得住我？马上能列出个123：
-#####开胃小菜，拈来尝尝1.在最后一个浮动元素的下面添加空白标签      &amp;lt;div style = &amp;quot;clear:both&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;or      &amp;lt;br clear = &amp;quot;all&amp;quot;&amp;gt">
-<meta property="og:updated_time" content="2017-03-21T12:38:12.571Z">
+<meta property="og:description" content="作为前端的好孩子，总会遇到一个经典不朽的问题：有几种闭合内部浮动的方法？哈哈，是不是想说这个能难得住我？马上能列出个123：开胃小菜，拈来尝尝1.在最后一个浮动元素的下面添加空白标签      &amp;lt;div style = &amp;quot;clear:both&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;or      &amp;lt;br clear = &amp;quot;all&amp;quot;&amp;gt;2.父元素">
+<meta property="og:updated_time" content="2017-03-21T12:54:02.911Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hasLayout与BFC">
-<meta name="twitter:description" content="作为前端的好孩子，总会遇到一个经典不朽的问题：有几种闭合内部浮动的方法？哈哈，是不是想说这个能难得住我？马上能列出个123：
-#####开胃小菜，拈来尝尝1.在最后一个浮动元素的下面添加空白标签      &amp;lt;div style = &amp;quot;clear:both&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;or      &amp;lt;br clear = &amp;quot;all&amp;quot;&amp;gt">
+<meta name="twitter:description" content="作为前端的好孩子，总会遇到一个经典不朽的问题：有几种闭合内部浮动的方法？哈哈，是不是想说这个能难得住我？马上能列出个123：开胃小菜，拈来尝尝1.在最后一个浮动元素的下面添加空白标签      &amp;lt;div style = &amp;quot;clear:both&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;or      &amp;lt;br clear = &amp;quot;all&amp;quot;&amp;gt;2.父元素">
   
     <link rel="alternative" href="/atom.xml" title="Candy 程的小日子" type="application/atom+xml">
   
@@ -182,34 +179,24 @@
 		
 		    
 			
-				<p>  作为前端的好孩子，总会遇到一个经典不朽的问题：有几种闭合内部浮动的方法？哈哈，是不是想说这个能难得住我？马上能列出个123：</p>
-<p>#####开胃小菜，拈来尝尝<br>1.在最后一个浮动元素的下面添加空白标签<br>      <code>&lt;div style = &quot;clear:both&quot;&gt;&lt;/div&gt;</code>or<br>      <code>&lt;br clear = &quot;all&quot;&gt;</code><br>2.父元素<code>overflow: hidden</code></p>
+				<p>  作为前端的好孩子，总会遇到一个经典不朽的问题：有几种闭合内部浮动的方法？哈哈，是不是想说这个能难得住我？马上能列出个123：<br><strong>开胃小菜，拈来尝尝</strong><br>1.在最后一个浮动元素的下面添加空白标签<br>      <code>&lt;div style = &quot;clear:both&quot;&gt;&lt;/div&gt;</code>or<br>      <code>&lt;br clear = &quot;all&quot;&gt;</code><br>2.父元素overflow: hidden</p>
 <blockquote>
 <p>IE 6不支持;一旦子元素的大小超过父容器的大小，就会出显示问题</p>
 </blockquote>
-<p>3.父元素<code>display: inline-block</code></p>
+<p>3.父元素display: inline-block</p>
 <blockquote>
-<p>若父元素使用<code>margin: 0 auto</code>实现居中时，<code>display: inline-block</code>使其转为行内元素，导致居中效果无效。</p>
+<p>若父元素使用<code>margin: 0 auto</code>实现居中时，<code>display: inline-block</code>使其转为行内元素，导致居中效果无效。<br>4.父元素position:  absolute or position: fixed(IE6不兼容);<br>使父元素脱离文档流，清除父元素的居中效果，且对后面的div等有类似于浮动的影响。好似关了一扇窗，却开了一道门，还是尽量不用的好。</p>
 </blockquote>
-<p>4.父元素<code>position:  absolute</code> or <code>position: fixed</code>(IE6不兼容);</p>
-<blockquote>
-<p>使父元素脱离文档流，清除父元素的居中效果，且对后面的div等有类似于浮动的影响。好似关了一扇窗，却开了一道门，还是尽量不用的好。</p>
-</blockquote>
-<p>5.父元素设置<code>float：right</code> or <code>float: left</code><br>6.为父元素添加after伪类<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">/******IE8+或其他******/</div><div class="line"> .clearfix:after &#123;</div><div class="line">     display: block;</div><div class="line">     content: " ";</div><div class="line">     height: 0;</div><div class="line">     overflow: hidden;</div><div class="line">     clear: both;</div><div class="line"> &#125;</div><div class="line">OR</div><div class="line">.clearfix:after &#123;</div><div class="line">    display: table;</div><div class="line">    content: " ";</div><div class="line">    clear: both;</div><div class="line"> &#125;</div><div class="line">/******IE6、IE7******/</div><div class="line">.clearfix &#123;</div><div class="line">   *zoom: 1;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>这样就完了吗？路漫漫其修远兮！<br>在整理的过程中，我们应该思考一下这背后的运行原理，否则的话，这些零碎的方法依靠硬记简直是伤害脑细胞和消磨青春的利器啊~~~</p>
-<p>#####硬货奉上，且行且珍惜，喝杯咖啡慢慢品<br>  其实，这里主要应用了以下两种方法：</p>
-<ul>
-<li><code>clear(方法1)</code></li>
-<li><code>IE专有的hasLayout和W3C标准下的BFC （方法2-6）</code><br>这里主要对hasLayout和BFC（毕竟也是大咖呀）展开学习。</li>
-</ul>
-<p>#####hasLayout</p>
+<p>5.父元素设置float：right or float: left<br>6.为父元素添加after伪类<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">/******IE8+或其他******/</div><div class="line"> .clearfix:after &#123;</div><div class="line">     display: block;</div><div class="line">     content: " ";</div><div class="line">     height: 0;</div><div class="line">     overflow: hidden;</div><div class="line">     clear: both;</div><div class="line"> &#125;</div><div class="line">OR</div><div class="line">.clearfix:after &#123;</div><div class="line">    display: table;</div><div class="line">    content: " ";</div><div class="line">    clear: both;</div><div class="line"> &#125;</div><div class="line">/******IE6、IE7******/</div><div class="line">.clearfix &#123;</div><div class="line">   *zoom: 1;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>这样就完了吗？路漫漫其修远兮！<br>在整理的过程中，我们应该思考一下这背后的运行原理，否则的话，这些零碎的方法依靠硬记简直是伤害脑细胞和消磨青春的利器啊~~~<br><strong>硬货奉上，且行且珍惜，喝杯咖啡慢慢品</strong><br>其实，这里主要应用了以下两种方法：<br>1.clear(方法1)<br>2.IE专有的hasLayout和W3C标准下的BFC （方法2-6）<br>这里主要对hasLayout和BFC（毕竟也是大咖呀）展开学习。</p>
+<p><strong>hasLayout</strong></p>
 <ul>
 <li>背景：<br>在IE中，使用layout（布局）概念控制元素的尺寸和定位。当一个元素的 hasLayout属性值为true时，我们说这个元素有一个布局（layout），当一个元素有一个布局时，它负责对自己和可能的子孙元素进行尺寸计算和定位。</li>
 <li>闭合内部浮动的原理：<br>通过上述背景我们了解到，当对无layout的元素触发了hasLayout，会使其对自己和子孙元素进行计算，不管子孙元素是否存在浮动。</li>
-<li>触发hasLayout的方法：   <figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">   position: absolute</div><div class="line">   float: left|right</div><div class="line">display: inline-block</div><div class="line">width: any value other than 'auto'</div><div class="line">height: any value other than 'auto'</div><div class="line">zoom: any value other than 'normal' （IE专用属性）</div><div class="line">writing-mode: tb-rl（IE专用属性）</div><div class="line">overflow: hidden|scroll|auto（只对IE 7及以上版本有效）</div><div class="line">overflow-x|-y: hidden|scroll|auto（只对IE 7及以上版本有效）</div></pre></td></tr></table></figure>
+<li>触发hasLayout的方法：  <figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">position: absolute</div><div class="line">float: left|right</div><div class="line">display: inline-block</div><div class="line">width: any value other than 'auto'</div><div class="line">height: any value other than 'auto'</div><div class="line">zoom: any value other than 'normal' （IE专用属性）</div><div class="line">writing-mode: tb-rl（IE专用属性）</div><div class="line">overflow: hidden|scroll|auto（只对IE 7及以上版本有效）</div><div class="line">overflow-x|-y: hidden|scroll|auto（只对IE 7及以上版本有效）</div></pre></td></tr></table></figure>
 </li>
 </ul>
-<p>#####BFC（Block Formatting Context，块级格式化上下文）</p>
+<p><strong>BFC（Block Formatting Context，块级格式化上下文）</strong></p>
 <ul>
 <li>背景<br>   Block：<pre><code>box(css的基本布局单位)的一种类型，由`display: block | table | list-item`控制。     
 </code></pre>   Formatting context：<pre><code>W3C CSS2.1 规范中的一个概念,表示页面的一个渲染区域，包含一系列渲染规则，用来控制元素及其子元素如何定位，以及与其他元素的作用关系。
@@ -265,11 +252,11 @@
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">BFC</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hasLayout</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hasLayout</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">BFC</a>
         		</li>
       		
 		</ul>
@@ -457,11 +444,11 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">BFC</a>
+                <a href="javascript:void(0)" class="js-tag color5">hasLayout</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hasLayout</a>
+                <a href="javascript:void(0)" class="js-tag color4">BFC</a>
               </li>
             
             <div class="clearfix"></div>
