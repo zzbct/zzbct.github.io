@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-03-21T12:58:38.508Z</updated>
+  <updated>2017-03-21T13:01:41.059Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,12 +20,21 @@
     <link href="http://yoursite.com/2017/03/21/hasLayout%E4%B8%8EBFC/"/>
     <id>http://yoursite.com/2017/03/21/hasLayout与BFC/</id>
     <published>2017-03-21T12:33:26.000Z</published>
-    <updated>2017-03-21T12:58:38.508Z</updated>
+    <updated>2017-03-21T13:01:41.059Z</updated>
     
-    <content type="html"><![CDATA[<p>作为前端的好孩子，总会遇到一个经典不朽的问题：有几种闭合内部浮动的方法？哈哈，是不是想说这个能难得住我？马上能列出个123：<br><strong>开胃小菜，拈来尝尝</strong><br>1.在最后一个浮动元素的下面添加空白标签<br>      <code>&lt;div style = &quot;clear:both&quot;&gt;&lt;/div&gt;</code>or<br>      <code>&lt;br clear = &quot;all&quot;&gt;</code><br>2.父元素overflow: hidden</p>
+    <content type="html"><![CDATA[<p>作为前端的好孩子，总会遇到一个经典不朽的问题：有几种闭合内部浮动的方法？哈哈，是不是想说这个能难得住我？马上能列出个123：<br><strong>开胃小菜，拈来尝尝</strong><br>1.在最后一个浮动元素的下面添加空白标签<br> <font color="red"><div style="clear:both"></div></font><br> <font color="red"><br clear="all"></font><br>2.父元素overflow: hidden</p>
 <blockquote>
-<p>IE 6不支持;一旦子元素的大小超过父容器的大小，就会出显示问题<br>3.父元素display: inline-block<br>若父元素使用<code>margin: 0 auto</code>实现居中时，<code>display: inline-block</code>使其转为行内元素，导致居中效果无效。<br>4.父元素position:  absolute or position: fixed(IE6不兼容);<br>使父元素脱离文档流，清除父元素的居中效果，且对后面的div等有类似于浮动的影响。好似关了一扇窗，却开了一道门，还是尽量不用的好。<br>5.父元素设置float：right or float: left<br>6.为父元素添加after伪类<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">/******IE8+或其他******/</div><div class="line"> .clearfix:after &#123;</div><div class="line">     display: block;</div><div class="line">     content: " ";</div><div class="line">     height: 0;</div><div class="line">     overflow: hidden;</div><div class="line">     clear: both;</div><div class="line"> &#125;</div><div class="line">OR</div><div class="line">.clearfix:after &#123;</div><div class="line">    display: table;</div><div class="line">    content: " ";</div><div class="line">    clear: both;</div><div class="line"> &#125;</div><div class="line">/******IE6、IE7******/</div><div class="line">.clearfix &#123;</div><div class="line">   *zoom: 1;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>IE 6不支持;一旦子元素的大小超过父容器的大小，就会出显示问题</p>
 </blockquote>
+<p>3.父元素display: inline-block</p>
+<blockquote>
+<p>若父元素使用<code>margin: 0 auto</code>实现居中时，<code>display: inline-block</code>使其转为行内元素，导致居中效果无效。</p>
+</blockquote>
+<p>4.父元素position:  absolute or position: fixed(IE6不兼容);</p>
+<blockquote>
+<p>使父元素脱离文档流，清除父元素的居中效果，且对后面的div等有类似于浮动的影响。好似关了一扇窗，却开了一道门，还是尽量不用的好。</p>
+</blockquote>
+<p>5.父元素设置float：right or float: left<br>6.为父元素添加after伪类<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">/******IE8+或其他******/</div><div class="line"> .clearfix:after &#123;</div><div class="line">     display: block;</div><div class="line">     content: " ";</div><div class="line">     height: 0;</div><div class="line">     overflow: hidden;</div><div class="line">     clear: both;</div><div class="line"> &#125;</div><div class="line">OR</div><div class="line">.clearfix:after &#123;</div><div class="line">    display: table;</div><div class="line">    content: " ";</div><div class="line">    clear: both;</div><div class="line"> &#125;</div><div class="line">/******IE6、IE7******/</div><div class="line">.clearfix &#123;</div><div class="line">   *zoom: 1;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <p>这样就完了吗？路漫漫其修远兮！<br>在整理的过程中，我们应该思考一下这背后的运行原理，否则的话，这些零碎的方法依靠硬记简直是伤害脑细胞和消磨青春的利器啊~~~</p>
 <p><strong>硬货奉上，且行且珍惜，喝杯咖啡慢慢品</strong></p>
 <p>其实，这里主要应用了以下两种方法：<br>1.clear(方法1)<br>2.IE专有的hasLayout和W3C标准下的BFC （方法2-6）<br>这里主要对hasLayout和BFC（毕竟也是大咖呀）展开学习。<br><strong>hasLayout</strong></p>
@@ -48,7 +57,7 @@
     
     <summary type="html">
     
-      &lt;p&gt;作为前端的好孩子，总会遇到一个经典不朽的问题：有几种闭合内部浮动的方法？哈哈，是不是想说这个能难得住我？马上能列出个123：&lt;br&gt;&lt;strong&gt;开胃小菜，拈来尝尝&lt;/strong&gt;&lt;br&gt;1.在最后一个浮动元素的下面添加空白标签&lt;br&gt;      &lt;code&gt;&amp;lt;d
+      &lt;p&gt;作为前端的好孩子，总会遇到一个经典不朽的问题：有几种闭合内部浮动的方法？哈哈，是不是想说这个能难得住我？马上能列出个123：&lt;br&gt;&lt;strong&gt;开胃小菜，拈来尝尝&lt;/strong&gt;&lt;br&gt;1.在最后一个浮动元素的下面添加空白标签&lt;br&gt; &lt;font color=&quot;red
     
     </summary>
     
