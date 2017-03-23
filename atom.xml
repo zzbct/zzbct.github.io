@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-03-21T14:03:40.350Z</updated>
+  <updated>2017-03-23T01:35:50.849Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -16,11 +16,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>hasLayout与BFC</title>
+    <title>闭合内部浮动引发的hasLayout、BFC学习</title>
     <link href="http://yoursite.com/2017/03/21/hasLayout%E4%B8%8EBFC/"/>
     <id>http://yoursite.com/2017/03/21/hasLayout与BFC/</id>
     <published>2017-03-21T12:33:26.000Z</published>
-    <updated>2017-03-21T14:03:40.350Z</updated>
+    <updated>2017-03-23T01:35:50.849Z</updated>
     
     <content type="html"><![CDATA[<p>作为前端的好孩子，总会遇到一个经典不朽的问题：有几种闭合内部浮动的方法？哈哈，是不是想说这个能难得住我？马上能列出个123：</p>
 <p><strong>开胃小菜，拈来尝尝</strong></p>
