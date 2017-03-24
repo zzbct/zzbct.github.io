@@ -10,7 +10,7 @@
 	var scrollSpeed = 5;
 
 	// Show and hide the scroll to top link based on scroll position
-	scrollElem.style.display = "none";
+	//scrollElem.style.display = "none";
 	window.addEventListener("scroll",function(){
 		var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
 		if ( scrollTop > upperLimit ) {
