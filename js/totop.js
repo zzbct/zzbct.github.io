@@ -11,14 +11,6 @@
 
 	// Show and hide the scroll to top link based on scroll position
 	//scrollElem.style.display = "none";
-	window.addEventListener("scroll",function(){
-		var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-		if ( scrollTop > upperLimit ) {
-			scrollElem.style.display = "block"; // fade back in
-		}else{
-			scrollElem.style.display = "none"; // fade out
-		}
-	},false)
 
 	// Scroll to top animation on click
 	scrollElem.addEventListener("click",function(){
