@@ -16,6 +16,6 @@
 	scrollElem.onclick = function(){
 		var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
 		console.log(scrollTop);
-		window.scrollTo(0,0);
+		scrollTo(0,0);
 	};
 })();
