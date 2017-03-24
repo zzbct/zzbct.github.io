@@ -14,7 +14,8 @@
 
 	// Scroll to top animation on click
 	scrollElem.onclick = function(){
-		console.log(1);
-		scrollTo(0,0);
+		var scrollTop = document.documentElement.screenTop || document.body.screenTop;
+		console.log(scrollTop);
+		window.scrollTo(0,0);
 	};
 })();
