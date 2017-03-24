@@ -14,6 +14,6 @@
 
 	// Scroll to top animation on click
 	scrollElem.addEventListener("click",function(){
-		window.scrollTo (0,0);
+		console.log(1);
 	},false);
 })();
