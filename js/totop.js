@@ -13,7 +13,8 @@
 	//scrollElem.style.display = "none";
 
 	// Scroll to top animation on click
-	scrollElem.addEventListener("click",function(){
+	scrollElem.onclick = function(){
 		console.log(1);
-	},false);
+		scrollTo(0,0);
+	};
 })();
